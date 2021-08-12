@@ -171,7 +171,7 @@ Student.prototype.greeting = function() {
 Student.courseName = () => 'This student is enrolled in Code 301.';
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-console.log(Student.courseName());
+// console.log(Student.courseName());
 
 
 
@@ -182,17 +182,19 @@ Student.prototype.scope = function() {
 };
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scope());
+console.log(joe.scope());
 
 Student.prototype.scopeArrow = () => console.log(this);
 
 // TODO: Uncomment the following line of code to see the output in the browser console
-// console.log(joe.scopeArrow());
+console.log(joe.scopeArrow());
 
 // TODO: Write a COMMENT below to answer the following questions.
 // 1. What is "this" when joe.scope() is invoked?
+// By accessing the Student constructor function, this gives us name: "Joe", age: "Schmoe", hometown: 100
 //
 // 2. What is "this" when joe.scopeArrow() is invoked?
+// Every property of the window (or global object)
 //
 // 3. Explain why "this" is different when an arrow function is used.
-//
+// Arrow functions do not have their own "this" and do not have a prototype property. They also cannot be used with constructors. This is because "Arrow functions establish "this" based on the scope the Arrow function is defined within."
